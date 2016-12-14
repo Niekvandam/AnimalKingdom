@@ -1,0 +1,271 @@
+package general;
+
+import birds.Parrot;
+import birds.Pinguin;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+import mammals.AfricanElephant;
+import mammals.AsianElephant;
+import mammals.GrayMouse;
+import mammals.Human;
+import mammals.WhiteMouse;
+import reptiles.Crocodile;
+import reptiles.Snake;
+import special.Platypus;
+
+public class Egg {
+
+    private Animal embryo;
+    private ArrayList<Egg> reptileEggs = new ArrayList();
+
+    //Egg constructor
+    public Egg() {
+
+    }
+
+    //Egg methods
+    public boolean isInseminated() {
+    return embryo == null;
+    }
+
+    public Animal getEmbryo() {
+        return embryo;
+    }
+
+    public void inseminate(Animal parent1, Animal parent2) {
+        Random rand = new Random();
+        int a = rand.nextInt(2) + 1;
+        String classname = parent1.getClass().getSimpleName();
+        switch (classname) {
+
+            case "Human":
+                embryo = new Human();
+         
+                
+                System.out.println("Making a new human huehuehue");
+                System.out.println("Please name your human");
+               Scanner sc = new Scanner(System.in);
+               sc.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                    ((Human) embryo).setInsertion(((Human) parent1).getInsertion());
+                    ((Human) embryo).setLastName(((Human) parent1).getLastName());
+                     embryo.setName(sc);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                    ((Human) embryo).setInsertion(((Human) parent1).getInsertion());
+                    ((Human) embryo).setLastName(((Human) parent1).getLastName());
+                   embryo.setName(sc);
+                }
+                break;
+
+            case "AsianElephant":
+                 System.out.println("Please name your Elephant");
+                embryo = new AsianElephant();
+                      Scanner sc1 = new Scanner(System.in);
+               sc1.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                    ((AsianElephant) embryo).setEarSize(((AsianElephant) parent1).getEarSize());
+                                 embryo.setName(sc1);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                    ((AsianElephant) embryo).setEarSize(((AsianElephant) parent2).getEarSize());
+                                 embryo.setName(sc1);
+                }
+                break;
+
+            case "AfricanElephant":
+                       System.out.println("Please name your Elephant");
+                embryo = new AfricanElephant();
+                      Scanner sc2 = new Scanner(System.in);
+               sc2.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                    ((AsianElephant) embryo).setEarSize(((AsianElephant) parent1).getEarSize());
+                                 embryo.setName(sc2);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                    ((AfricanElephant) embryo).setEarSize(((AfricanElephant) parent2).getEarSize());
+                                 embryo.setName(sc2);
+                }
+                break;
+
+            case "WhiteMouse":
+                       System.out.println("Please name your Mouse");
+                      Scanner sc3 = new Scanner(System.in);
+               sc3.nextLine();
+                embryo = new WhiteMouse();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc3);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc3);
+                }
+                break;
+
+            case "GrayMouse":
+                       System.out.println("Please name your Mouse");
+                embryo = new GrayMouse();
+                      Scanner sc4 = new Scanner(System.in);
+               sc4.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc4);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc4);
+                }
+                break;
+
+            case "Snake":
+                       System.out.println("Please name your Snake");
+                embryo = new Snake();
+                      Scanner sc5 = new Scanner(System.in);
+               sc5.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc5);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc5);
+                }
+                break;
+
+            case "Crocodile":
+                       System.out.println("Please name your Crocodile");
+                embryo = new Crocodile();
+                      Scanner sc6 = new Scanner(System.in);
+               sc6.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc6);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc6);
+                }
+                break;
+            case "Platypus":
+                       System.out.println("Please name your Platypus");
+                embryo = new Platypus();
+                      Scanner sc7 = new Scanner(System.in);
+               sc7.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc7);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc7);
+                }
+                break;
+            case "Parrot":
+                       System.out.println("Please name your Parrot");
+                embryo = new Parrot();
+                      Scanner sc8 = new Scanner(System.in);
+               sc8.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc8);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc8);
+                }
+                break;
+            case "Pinguin":
+                       System.out.println("Please name your Pinguin");
+                embryo = new Pinguin();
+                      Scanner sc9 = new Scanner(System.in);
+               sc9.nextLine();
+                if (a == 1) {
+                    embryo.setColor(parent1.getColor());
+                    embryo.setBodyCovering(parent1.getBodyCovering());
+                    embryo.setGender(parent1.getGender());
+                    embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent1.getWeight());
+                                 embryo.setName(sc9);
+                } else {
+                    embryo.setColor(parent2.getColor());
+                    embryo.setBodyCovering(parent2.getBodyCovering());
+                    embryo.setGender(parent2.getGender());
+                    embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
+                    embryo.setWeight((int) parent2.getWeight());
+                                 embryo.setName(sc9);
+                }
+                break;
+        }
+    }
+}

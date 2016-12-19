@@ -87,8 +87,10 @@ public class AnimalKingdom1 {
         Egg e = new Egg();
  //       System.out.println(p.layEggs());
 
-        GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
+  //      GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
 
+GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
+//GiantCookie.giveBirth();
 
 
 //GiantCookie.MakeLove(PizzaMan);

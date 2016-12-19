@@ -51,11 +51,7 @@ public class Human extends Mammal {
     }
 
     public boolean isMarried() {
-        if (partner == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return partner != null;
     }
 
     public void divorce() {

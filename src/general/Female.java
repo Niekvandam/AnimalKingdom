@@ -12,7 +12,7 @@ public class Female extends Gender {
     private ArrayList<Egg> eggs = new ArrayList();
     private final OvulatingThread ovThread;
     private ArrayList<Egg> inseminatedEggs = new ArrayList();
-    
+
     //Female constructor
     public Female() {
         Random r = new Random();
@@ -55,16 +55,12 @@ public class Female extends Gender {
         this.eggs = eggs;
     }
 
-//Abstract methods
+    //Abstract methods
     @Override
     public boolean isPregnant() {
-        Egg e = new Egg();
-        if (e.isInseminated() == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
+
 
     @Override
     public void propagate(Animal parent1, Animal parent2) {
@@ -78,8 +74,13 @@ public class Female extends Gender {
             System.out.println("We are inseminating eggs oh yeah oh yeah");
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
+                inseminatedEggs.add(egg);
+
 
             }
+            System.out.println(inseminatedEggs.get(0).getEmbryo().getName());
+            System.out.println(inseminatedEggs.get(1).getEmbryo().getName());
+            System.out.println(inseminatedEggs.get(2).getEmbryo().getName());
         }
     }
 
@@ -91,6 +92,11 @@ public class Female extends Gender {
     @Override
     public boolean isFemale() {
         return true;
+    }
+
+
+    public void cleararraylist() {
+        inseminatedEggs.clear();
     }
 
 }

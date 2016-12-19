@@ -28,11 +28,7 @@ public class Egg {
 
     //Egg methods
     public boolean isInseminated() {
-    if (embryo == null){
-    return false;
-            } else {
-    return true;
-    }
+        return embryo != null;
     }
     
     public Animal getEmbryo() {
@@ -56,7 +52,7 @@ public class Egg {
                     embryo.setWeight((int) parent1.getWeight());
                     ((Human) embryo).setInsertion(((Human) parent1).getInsertion());
                     ((Human) embryo).setLastName(((Human) parent1).getLastName());
-                    ((Human) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
@@ -67,8 +63,6 @@ public class Egg {
                     ((Human) embryo).setLastName(((Human) parent1).getLastName());
                     embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
                 break;
 
             case "AsianElephant":
@@ -91,8 +85,7 @@ public class Egg {
                     ((AsianElephant) embryo).setEarSize(((AsianElephant) parent2).getEarSize());
                     embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "AfricanElephant":
@@ -104,7 +97,7 @@ public class Egg {
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
                     ((AsianElephant) embryo).setEarSize(((AsianElephant) parent1).getEarSize());
-                    ((AfricanElephant) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
@@ -112,10 +105,9 @@ public class Egg {
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
                     ((AfricanElephant) embryo).setEarSize(((AfricanElephant) parent2).getEarSize());
-                    ((AfricanElephant) embryo).setName(this.namegiving());
+                     embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "WhiteMouse":
@@ -126,7 +118,7 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((WhiteMouse) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
@@ -135,8 +127,7 @@ public class Egg {
                     embryo.setWeight((int) parent2.getWeight());
                     embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "GrayMouse":
@@ -147,17 +138,16 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((GrayMouse) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((GrayMouse) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "Snake":
@@ -168,17 +158,16 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((Snake) embryo).setName(this.namegiving());  
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((Snake) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "Crocodile":
@@ -189,17 +178,16 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((Crocodile) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((Crocodile) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
             case "Platypus":
@@ -210,17 +198,16 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((Platypus) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((Platypus) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
             case "Parrot":
                 embryo = new Parrot();
@@ -230,17 +217,17 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((Parrot) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((Parrot) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
+
                 break;
             case "Pinguin":
                 embryo = new Pinguin();
@@ -250,18 +237,17 @@ public class Egg {
                     embryo.setGender(parent1.getGender());
                     embryo.setMaxNumberOfEggs(parent1.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent1.getWeight());
-                    ((Pinguin) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 } else {
                     embryo.setColor(parent2.getColor());
                     embryo.setBodyCovering(parent2.getBodyCovering());
                     embryo.setGender(parent2.getGender());
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
-                    ((Pinguin) embryo).setName(this.namegiving());
+                    embryo.setName(this.namegiving());
 
                 }
-                Zoo.getInstance().addAnimal(embryo);
-                System.out.println(Zoo.getInstance().getCageOfAnimal(embryo).getCageType());
+
                 break;
 
         }
@@ -318,7 +304,23 @@ public class Egg {
             "Ruth",
             "Kira ",
             "Jamie",
-            "Claudine"};
+            "Claudine",
+            "Freek vonk",
+            "vonkboi",
+            "Robbie Rotten",
+            "Sportaflop",
+            "Flobbie Flotten",
+            "Tobbie Totten",
+            "Bobbie Botten",
+            "Arrogante kut pop",
+            "Stingy",
+            "Pink haired girl",
+            "Mine guy",
+            "Parking meter",
+            "Triagonal sign",
+            "Archibald johan gerard ",
+            "Gandalf"
+        };
         Random random = new Random();
         int select = random.nextInt(arr.length);
         return(arr[select]);

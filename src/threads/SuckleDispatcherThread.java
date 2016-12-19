@@ -24,7 +24,7 @@ private Mammal mother;
                                                
                                                for(IMammal anAnimal : IMammal.babies){
                                                   Zoo.getInstance().addAnimal((Animal) anAnimal);
-                                                  
+
                                                }
 
 		} catch (InterruptedException e) {

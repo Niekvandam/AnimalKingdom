@@ -4,6 +4,6 @@ import java.util.ArrayList;
 public interface IEggLayer {
     
     
-    public ArrayList<Egg> layEggs();
+    ArrayList<Egg> layEggs();
 
 }

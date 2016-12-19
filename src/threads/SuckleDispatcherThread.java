@@ -21,11 +21,14 @@ private Mammal mother;
 			sleep(30000); /* This Thread pauzes for 30 seconds before executing the next line of code. Adjust if you feel the need. */
 			
                                                mother.getBabies();
-                                               
+                                               System.out.println(IMammal.babies);
                                                for(IMammal anAnimal : IMammal.babies){
                                                   Zoo.getInstance().addAnimal((Animal) anAnimal);
 
                                                }
+                                               IMammal.babies.clear();
+                                               System.out.println("Babies added to the zoo");
+
 
 		} catch (InterruptedException e) {
 

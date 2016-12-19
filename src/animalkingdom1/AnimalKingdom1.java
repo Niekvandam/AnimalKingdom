@@ -1,5 +1,6 @@
 package animalkingdom1;
 
+import birds.Bird;
 import birds.Parrot;
 import birds.Pinguin;
 import general.Egg;
@@ -50,11 +51,11 @@ public class AnimalKingdom1 {
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 //
 //        //Human]
-        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3);
+//        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3);
 //
-        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3);
-        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3);
-        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3);
+        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null);
+        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null);
+        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3, null);
 //
 //        //Crocodile
 //        Crocodile Croc = new Crocodile(new Male(), "Scales", "Archibald Krok", "Green", 200, 9);
@@ -84,16 +85,16 @@ public class AnimalKingdom1 {
 //        System.out.println(Homosapien1.getPartner());
 
 
-        Egg e = new Egg();
+       // Egg e = new Egg();
  //       System.out.println(p.layEggs());
 
   //      GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
 
-GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
-//GiantCookie.giveBirth();
-
+//GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
+//System.out.println(GiantCookie.isPregnant());
 
 //GiantCookie.MakeLove(PizzaMan);
+p1.getGender().propagate(p1, p);
 
     }
 

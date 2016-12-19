@@ -28,7 +28,10 @@ public class Egg {
 
     //Egg methods
     public boolean isInseminated() {
-        return embryo != null;
+        if(embryo != null){
+            return true;
+        }
+        return false;
     }
     
     public Animal getEmbryo() {

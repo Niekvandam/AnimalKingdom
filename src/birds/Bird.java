@@ -17,6 +17,7 @@ public Bird (Gender gender, String bodyCovering, String name, String color, doub
 
 public ArrayList<Egg> layEggs(){
      this.getGender().giveBirth();
+     System.out.println("Laying eggs");
      return null;
 }
 

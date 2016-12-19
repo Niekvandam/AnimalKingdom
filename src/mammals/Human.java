@@ -8,17 +8,17 @@ import java.util.Random;
 public class Human extends Mammal {
 
     private boolean usesBirthControl;
-    public String LastName;
-    public String insertion;
-    public int maxNumberOfEggs;
- 
+    private String LastName;
+    private String insertion;
+    private int maxNumberOfEggs;
+    private String STD;
 
     //constructor   
     public Human() {
         super();
     }
 
-    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs) {
+    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs, String STD) {
         super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
     }
 
@@ -26,8 +26,7 @@ public class Human extends Mammal {
 
     //methods
     public void MakeLove(Human partner) {
-                System.out.println("AWWW YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
-          
+
     }
 
 
@@ -35,8 +34,45 @@ public class Human extends Mammal {
     private void marriageLove() {
     }
 
-    private void adulteryLove(Human lover) {
+    public void adulteryLove(Human lover) {
+        System.out.println("This is wrong");
+        Random randomGenerator = new Random();
+        int randomInt = randomGenerator.nextInt(100);
+        if (randomInt <= 10) {
+            System.out.println("WHAT ARE YOU DOING HERE (in my swamp)");
+            System.out.println("I slipped onto it while being naked");
+            this.setPartner(null);
+            System.out.println("Your new partner is: " + this.getPartner());
+            System.out.println("You're alone now fgt");
+
+        }
+        if (randomInt <= 99){
+        this.STDGIVING();
+        }
+
     }
+
+
+
+    public void STDGIVING(){
+        String[] arr = {
+                "Robbie rotten virus",
+                "HIV",
+                "AIDS",
+                "Kinderziekte",
+                "Genital warts",
+                "Herpes",
+                "Hepatitis",
+                "Chlamydia",
+                "Cholera",
+                "Crabs"
+        };
+        Random random5 = new Random();
+        int STD = random5.nextInt();
+        this.setSTD(arr[STD]);
+
+    }
+
 
     public boolean marry(Human partner) {
         boolean maleIsMarried = this.isMarried();
@@ -50,12 +86,12 @@ public class Human extends Mammal {
         }
     }
 
-    public boolean isMarried() {
+    private boolean isMarried() {
         return partner != null;
     }
 
     public void divorce() {
-        if (this.isMarried() == true) {
+        if (this.isMarried()) {
             this.setPartner(null);
             partner.setPartner(null);
         } else {
@@ -64,15 +100,15 @@ public class Human extends Mammal {
 
     }
 
-    
-    
+
+
     //abstract methods
     @Override
     public void suckle() {
     }
 
-    
-    
+
+
     @Override
     public String communicate() {
         if (this.isMarried() == false) {
@@ -104,10 +140,10 @@ public class Human extends Mammal {
     }
 
 
-    public Human getPartner() {
+
+  public Human getPartner() {
         return partner;
     }
-
     public void setPartner(Human partner) {
         this.partner = partner;
     }
@@ -120,5 +156,14 @@ public class Human extends Mammal {
    this.LastName = lastName;
     }
 
-    
+    public String getSTD() {
+        return STD;
+    }
+
+    public void setSTD(String STD) {
+        this.STD = STD;
+    }
+
+
+
 }

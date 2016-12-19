@@ -5,5 +5,4 @@ public interface IMammal {
     public void suckle();
     public ArrayList<IMammal> babies = new ArrayList();
 
-    //jlkadfjkl
 }

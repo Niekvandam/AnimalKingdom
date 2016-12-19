@@ -1,8 +1,11 @@
 package general;
 
+import threads.OvulatingThread;
+import zoo.Zoo;
+
 import java.util.ArrayList;
 import java.util.Random;
-import model.utils.OvulatingThread;
+
 
 public class Female extends Gender {
 
@@ -65,14 +68,17 @@ public class Female extends Gender {
 
     @Override
     public void propagate(Animal parent1, Animal parent2) {
-        if (parent1.getClass().getSimpleName() != parent2.getClass().getSimpleName()) {
+        if (parent1.getClass() != parent2.getClass()) {
             System.out.println("Can't fuck with da beast boi");
         }
         if (parent1.isFemale() && parent2.isFemale() == true) {
             System.out.println("Can't get pregnant because they're both female");
         } else {
+            this.ovulate();
+            System.out.println("We are inseminating eggs oh yeah oh yeah");
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
+
             }
         }
     }

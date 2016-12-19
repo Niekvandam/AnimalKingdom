@@ -17,6 +17,7 @@ import reptiles.Crocodile;
 import reptiles.Snake;
 import reptiles.Snek;
 import special.Platypus;
+import threads.SuperSexyThread;
 import zoo.Cage;
 import zoo.Zoo;
 
@@ -25,7 +26,9 @@ public class AnimalKingdom1 {
     public static void main(String[] args) throws InterruptedException {
 
 //        //parrot
-        Parrot p = new Parrot(new Female(), "Feathers", "Johan IV", "Blue", 0.18, 5);
+
+        Parrot p = new Parrot(new Male(), "Feathers", "Johan IV", "Blue", 0.18, 5);
+        Parrot p1 = new Parrot(new Female(), "Feathers", "Johan IV", "Blue", 0.18, 5);
 //
 //        
 //        //pinguin
@@ -69,16 +72,27 @@ public class AnimalKingdom1 {
 
         //Animal test methods
         //Propagate test animals
+
+
 //        Snake an1 = new Snake(new Male(), "Scales", "PropagateTestAnimal1", "Brown and black", 5, 9);
 //        Snake an2 = new Snake(new Female(), "Scales", "PropagateTestAnimal2", "Brown and black", 5, 9);
 //        System.out.println(an1.Propagate(an2));
-        //Marry test animals
-        //    Homosapien.marry(Hughmungus);
+
+
+        //                  Marry test animals
+        //                Homosapien.marry(Hughmungus);
 //        System.out.println(Homosapien1.getPartner());
+
+
         Egg e = new Egg();
-        p.layEggs();
+ //       System.out.println(p.layEggs());
+
+        GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
+
+
 
 //GiantCookie.MakeLove(PizzaMan);
+
     }
 
 }

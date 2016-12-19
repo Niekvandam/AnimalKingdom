@@ -9,7 +9,7 @@ import java.util.TreeSet;
 
 public class Zoo {
 
-   private TreeSet<Cage> cages = new TreeSet();
+    private TreeSet<Cage> cages = new TreeSet();
     protected String name;
     private static Zoo instance;
     private ArrayList ReptileEggHatcherThread;
@@ -98,8 +98,9 @@ public class Zoo {
     }
 
     public ArrayList<Animal> getAllAnimals() {
-  return null;
+        return null;
     }
+
 
   public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {
       Cage reptileCage = getCageByRace(reptileEggs.get(0).getEmbryo().getClass());

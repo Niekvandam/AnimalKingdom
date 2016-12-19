@@ -4,8 +4,10 @@ import Interfaces.IMammal;
 import general.Animal;
 import general.Egg;
 import general.Gender;
+import threads.SuckleDispatcherThread;
+
 import java.util.ArrayList;
-import model.utils.SuckleDispatcherThread;
+
 
 public abstract class Mammal extends Animal {
 

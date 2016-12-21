@@ -84,8 +84,8 @@ public class Zoo {
   }
 
     public ArrayList<Animal> getAllAnimalsByRace(Class<? extends Animal> race) {
-        
         Cage aCage = getCageByRace(Animal.class);
+
         return aCage.getCagedAnimals();
     }
 
@@ -103,7 +103,6 @@ public class Zoo {
 
 
   public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {
-        
       Cage reptileCage = getCageByRace(reptileEggs.get(0).getEmbryo().getClass());
       new ReptileEggHatcherThread(reptileCage, reptileEggs).start();
 
@@ -121,7 +120,6 @@ public class Zoo {
     public ArrayList getReptileEggHatcherThread() {
        return ReptileEggHatcherThread;
    }
-
    public void setReptileEggHatcherThread(ArrayList ReptileEggHatcherThread) {
         this.ReptileEggHatcherThread = ReptileEggHatcherThread;
     }

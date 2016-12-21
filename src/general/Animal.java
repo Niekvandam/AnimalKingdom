@@ -26,7 +26,7 @@ public abstract class Animal {
     }
 
     //ArrayLists
-    private final ArrayList<Animal> cagedAnimals = new ArrayList();
+
 
     //Animal methods
     protected int maxNumberOfEggs;

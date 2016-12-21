@@ -19,7 +19,6 @@ public class OvulatingThread extends Thread {
     @Override
     public void run() {
         super.run();
-
         try {
             sleep(initialDelay);
             while (true) {

@@ -18,7 +18,7 @@ public class Female extends Gender {
         Random r = new Random();
         int i = r.nextInt(10);
         i++;
-        i = i * 10000;
+        i = i * 1000;
         ovThread = new OvulatingThread(this, i);
         ovThread.start();
         r = null;
@@ -32,10 +32,11 @@ public class Female extends Gender {
             int i = this.getGenderOwner().getMaxNumberOfEggs();
             for (int a = 0; a < i; a++) {
                 eggs.add(new Egg());
-                System.out.println("Eggs");
+
             }
-            System.out.println("TIME FOR SEX");
+
         }
+        System.out.println("TIME FOR SEX");
     }
 
     public void menstruate() {
@@ -43,7 +44,7 @@ public class Female extends Gender {
             System.out.println("You can't menstruate when you're pregnant");
         } else {
             eggs.clear();
-            System.out.println("Menstruation successful");
+            System.out.println("");
         }
     }
 
@@ -67,13 +68,13 @@ public class Female extends Gender {
     public void propagate(Animal parent1, Animal parent2) {
         this.ovulate();
         if (parent1.getClass().equals(parent2.getClass())) {
-            System.out.println("We are inseminating eggs oh yeah oh yeah");
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
                 egg.getEmbryo().getName();
                 System.out.println(egg.getEmbryo().getName());
             }
+
             } else{
                 System.out.println("Can't fuck with da beast boii");
 

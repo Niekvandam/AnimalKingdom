@@ -12,6 +12,7 @@ public class Human extends Mammal {
     private String insertion;
     private int maxNumberOfEggs;
     private String STD;
+    private Human partner;
 
     //constructor   
     public Human() {
@@ -22,16 +23,30 @@ public class Human extends Mammal {
         super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
     }
 
-    private Human partner;
+
 
     //methods
-    public void MakeLove(Human partner) {
-
+    public void MakeLove(){
+    System.out.println("I am making love and I am single");
     }
 
+    public void MakeLove(Human partner) {
+        if (partner == this.partner) {
+            this.marriageLove(partner);
+        } else if (this.partner == null && partner.partner == null) {
+            this.MakeLove();
+        } else {
+                this.adulteryLove(partner);
+            }
+        }
 
 
-    private void marriageLove() {
+
+
+
+    public void marriageLove(Human partner) {
+        System.out.println("We are married yay");
+
     }
 
     public void adulteryLove(Human lover) {
@@ -68,7 +83,7 @@ public class Human extends Mammal {
                 "Crabs"
         };
         Random random5 = new Random();
-        int STD = random5.nextInt();
+        int STD = random5.nextInt(10);
         this.setSTD(arr[STD]);
 
     }

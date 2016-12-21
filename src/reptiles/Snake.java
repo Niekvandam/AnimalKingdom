@@ -1,6 +1,10 @@
 package reptiles;
 
+import general.Egg;
 import general.Gender;
+import zoo.Zoo;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Snake extends Reptile {
@@ -27,6 +31,13 @@ super();
         public Snake  (Gender gender, String bodyCovering, String name, String color, double weight, int maxNumberOfEggs){
             super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
 }
+
+    @Override
+    public ArrayList<Egg> layEggs(){
+        ArrayList<Egg> reptileEggs = this.giveBirth();
+        Zoo.getInstance().addEggsOfReptiles(reptileEggs);
+        return reptileEggs;
     }
+}
     
 

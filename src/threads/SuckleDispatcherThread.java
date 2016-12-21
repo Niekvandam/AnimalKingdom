@@ -17,7 +17,7 @@ private Mammal mother;
 	public void run() {
 		super.run();
 		try {
-			/* Wait a while before the babies grow up and are added to the Zoo. */
+			System.out.println("Reached suckle");
 			sleep(30000); /* This Thread pauzes for 30 seconds before executing the next line of code. Adjust if you feel the need. */
 			
                                                mother.getBabies();

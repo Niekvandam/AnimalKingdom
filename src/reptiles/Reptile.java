@@ -18,14 +18,12 @@ public Reptile(){
         super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
     }
 
-    @Override
-    public ArrayList<Egg> layEggs() {
-        ArrayList reptileEggs = this.getGender().giveBirth();
-        Zoo z = new Zoo();
-        Zoo.getInstance();
-//        z.addEggsOfReptiles(reptileEggs);
+        public ArrayList<Egg> layEggs(){
+        ArrayList<Egg> reptileEggs = this.giveBirth();
         return null;
+        }
+
     }
 
     
-}
+

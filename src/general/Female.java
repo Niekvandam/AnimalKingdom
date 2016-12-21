@@ -10,7 +10,7 @@ import java.util.Random;
 public class Female extends Gender {
 
     private ArrayList<Egg> eggs = new ArrayList();
-    private final OvulatingThread ovThread;
+    private OvulatingThread ovThread;
     private ArrayList<Egg> inseminatedEggs = new ArrayList();
 
     //Female constructor
@@ -18,7 +18,7 @@ public class Female extends Gender {
         Random r = new Random();
         int i = r.nextInt(10);
         i++;
-        i = i * 100;
+        i = i * 10000;
         ovThread = new OvulatingThread(this, i);
         ovThread.start();
         r = null;
@@ -26,23 +26,24 @@ public class Female extends Gender {
 
     //methods
     public void ovulate() {
-        if (this.isPregnant() == true) {
+        if (this.isNotPregnant() == false) {
             System.out.println("You can't ovulate when you're pregnant");
         } else {
             int i = this.getGenderOwner().getMaxNumberOfEggs();
             for (int a = 0; a < i; a++) {
                 eggs.add(new Egg());
-                System.out.println("Ovulation succesfull");
+                System.out.println("Eggs");
             }
+            System.out.println("TIME FOR SEX");
         }
     }
 
     public void menstruate() {
-        if (this.isPregnant() == true) {
+        if (this.isNotPregnant() == false) {
             System.out.println("You can't menstruate when you're pregnant");
         } else {
             eggs.clear();
-            System.out.println("Menstruation succesfull");
+            System.out.println("Menstruation successful");
         }
     }
 
@@ -57,33 +58,29 @@ public class Female extends Gender {
 
     //Abstract methods
     @Override
-    public boolean isPregnant() {
-        for(Egg egg: eggs) {
-         egg.isInseminated();
-        if (egg.isInseminated());
-        return true;
-        }
-        return false;
+    public boolean isNotPregnant() {
+        return inseminatedEggs.isEmpty();
     }
+
 
     @Override
     public void propagate(Animal parent1, Animal parent2) {
-        if (parent1.getClass().getSimpleName() != parent2.getClass().getSimpleName()) {
-
-        }
-        if (parent1.isFemale() && parent2.isFemale() == true) {
-
-        } else {
+        this.ovulate();
+        if (parent1.getClass().equals(parent2.getClass())) {
             System.out.println("We are inseminating eggs oh yeah oh yeah");
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
-
+                egg.getEmbryo().getName();
+                System.out.println(egg.getEmbryo().getName());
+            }
+            } else{
+                System.out.println("Can't fuck with da beast boii");
 
             }
-
         }
-    }
+
+
 
     @Override
     public ArrayList<Egg> giveBirth() {

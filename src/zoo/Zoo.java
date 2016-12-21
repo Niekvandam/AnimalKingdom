@@ -103,8 +103,10 @@ public class Zoo {
 
 
   public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {
+        
       Cage reptileCage = getCageByRace(reptileEggs.get(0).getEmbryo().getClass());
       new ReptileEggHatcherThread(reptileCage, reptileEggs).start();
+
     }
 
     //Getters and Setters

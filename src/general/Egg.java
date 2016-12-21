@@ -65,6 +65,7 @@ public class Egg {
                     ((Human) embryo).setInsertion(((Human) parent1).getInsertion());
                     ((Human) embryo).setLastName(((Human) parent1).getLastName());
                     embryo.setName(this.namegiving());
+
                 }
                 break;
 

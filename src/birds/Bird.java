@@ -15,18 +15,18 @@ public Bird (Gender gender, String bodyCovering, String name, String color, doub
 }
 
 
-public ArrayList<Egg> layEggs(){
-     this.getGender().giveBirth();
-     System.out.println("Laying eggs");
-     return null;
+    public ArrayList<Egg> layEggs(){
+            this.getGender().giveBirth();
+            System.out.println("Laying eggs");
+        return null;
 }
 
-public void hatchEggs(ArrayList<Egg> layedEggs){
-Zoo z = new Zoo();
-for(Egg e : layedEggs){
-Animal b = e.getEmbryo();
-Zoo.getInstance();
-z.addAnimal(b);
+    public void hatchEggs(ArrayList<Egg> layedEggs){
+        Zoo z = new Zoo();
+        for(Egg e : layedEggs){
+        Animal b = e.getEmbryo();
+        Zoo.getInstance();
+        z.addAnimal(b);
 }
 }
 

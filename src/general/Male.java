@@ -14,15 +14,14 @@ public Male(){
     
   //Abstract methods
     @Override
-    public boolean isPregnant() {
+    public boolean isNotPregnant() {
         System.out.println("Why did you even bother thinking a male could be pregnant");
         return false;
     }
 
     @Override
     public void propagate(Animal parent1, Animal parent2) {
-       System.out.println ("AWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA BBBBBBBBBBBOOOOOOOOOOOOOOOOOIIIIIIIIIIIIIIII");
- 
+        System.out.println("This is fun");
     }
 
     @Override

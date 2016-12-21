@@ -42,25 +42,25 @@ public abstract class Animal {
     }
 
     public ArrayList<Egg> giveBirth() {
-        ArrayList<Egg> giveBirth = gender.giveBirth();
+        ArrayList<Egg> giveBirth = this.getGender().giveBirth();
         return giveBirth;
     }
 
     public String Propagate(Animal partner) {
-        if (this.getClass() != partner.getClass()) {
-            System.out.println("Can't propagate because it's not the same species");
-        } else {
+//        if (this.getClass().getSimpleName() != partner.getClass().getSimpleName()) {
+//            System.out.println("Can't propagate because it's not the same species");
+//        } else {
             partner.gender.propagate(this, partner);
             this.gender.propagate(partner, this);
-            Gender partnerGender = partner.getGender();
             System.out.println("Propagating...");
             this.gender.propagate(this, partner);
-        }
         return ("Propagation complete");
-    }
+        }
 
-    public boolean isPregnant() {
-        return gender.isPregnant();
+
+
+    public boolean isNotPregnant() {
+        return gender.isNotPregnant();
     }
 
     //Getters and Setters

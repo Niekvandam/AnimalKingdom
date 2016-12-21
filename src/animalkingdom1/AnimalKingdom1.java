@@ -51,7 +51,7 @@ public class AnimalKingdom1 {
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 //
 //        //Human]
-//        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3);
+        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null);
 //
         Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null);
         Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null);
@@ -62,6 +62,7 @@ public class AnimalKingdom1 {
 //
 //        //Snake         
         Snake snake = new Snake(new Male(), "Scales", "Rick", "Black", 3, 10);
+        Snake snekkinator = new Snake(new Female(), "Scales", "Coen", "Black and blue", 5 , 15);
 //
 //        //Snek (Class just for fun)        
 //    Snek Snek = new Snek(new Male(), "Dank memes", "Snek the snek", "Memes", 69, 69);
@@ -75,26 +76,18 @@ public class AnimalKingdom1 {
         //Propagate test animals
 
 
-//        Snake an1 = new Snake(new Male(), "Scales", "PropagateTestAnimal1", "Brown and black", 5, 9);
-//        Snake an2 = new Snake(new Female(), "Scales", "PropagateTestAnimal2", "Brown and black", 5, 9);
-//        System.out.println(an1.Propagate(an2));
+
+        GiantCookie.getGender().propagate(GiantCookie, Homosapien);
 
 
-        //                  Marry test animals
-        //                Homosapien.marry(Hughmungus);
-//        System.out.println(Homosapien1.getPartner());
 
-
-       // Egg e = new Egg();
+//    p1.getGender().propagate(p, p1);
  //       System.out.println(p.layEggs());
+      //  snekkinator.getGender().propagate(snekkinator, snake);
+      //  snekkinator.layEggs();
 
-  //      GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
 
-//GiantCookie.getGender().propagate(GiantCookie, PizzaMan);
-//System.out.println(GiantCookie.isPregnant());
 
-//GiantCookie.MakeLove(PizzaMan);
-p1.getGender().propagate(p1, p);
 
     }
 

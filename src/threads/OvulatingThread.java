@@ -1,5 +1,6 @@
 package threads;
 
+import animalkingdom1.AnimalKingdom1;
 import general.Animal;
 import general.Female;
 import general.Male;
@@ -22,14 +23,14 @@ public class OvulatingThread extends Thread {
         try {
             sleep(initialDelay);
             while (true) {
-                sleep(2000);
 
                 fem.ovulate();
 
-
-                sleep(2000);
+                sleep(20000);
 
                 fem.menstruate();
+
+                sleep(20000);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

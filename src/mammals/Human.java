@@ -2,24 +2,29 @@ package mammals;
 
 import general.Female;
 import general.Gender;
+import threads.SuckleDispatcherThread;
+
 import java.util.Random;
 
 
 public class Human extends Mammal {
 
-    private boolean usesBirthControl;
     private String LastName;
     private String insertion;
     private int maxNumberOfEggs;
-    private String STD;
     private Human partner;
+    public String std;
+    public boolean usesbirthcontrol;
+    private int getcaught = 50;
+    private int stdchance = 5;
+
 
     //constructor   
     public Human() {
         super();
     }
 
-    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs, String STD) {
+    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs, String STD, boolean usesBirthControl) {
         super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
     }
 
@@ -28,10 +33,19 @@ public class Human extends Mammal {
     //methods
     public void MakeLove(){
     System.out.println("I am making love and I am single");
+        Random randomGenerator = new Random();
+        int randomInt1 = randomGenerator.nextInt(100);
+    if(randomInt1 <= stdchance){
+        this.setStd("Chlamydia and Cholera in one.. so basically AIDS");
+    }
+    this.setStdchance(getStdchance() + 5);
     }
 
     public void MakeLove(Human partner) {
-        if (partner == this.partner) {
+        if(this.isUsesbirthcontrol() == true){
+            setStdchance(0);
+        }
+            if (partner == this.partner) {
             this.marriageLove(partner);
         } else if (this.partner == null && partner.partner == null) {
             this.MakeLove();
@@ -53,40 +67,22 @@ public class Human extends Mammal {
         System.out.println("This is wrong");
         Random randomGenerator = new Random();
         int randomInt = randomGenerator.nextInt(100);
-        if (randomInt <= 10) {
+        if (randomInt <= getGetcaught()) {
             System.out.println("WHAT ARE YOU DOING HERE (in my swamp)");
             System.out.println("I slipped onto it while being naked");
             this.setPartner(null);
             System.out.println("Your new partner is: " + this.getPartner());
             System.out.println("You're alone now fgt");
-
         }
-        if (randomInt <= 99){
-        this.STDGIVING();
+        if (randomInt <= stdchance){
+            this.setStd("Aids");
+        }
+        this.setGetcaught(getGetcaught() + 5);
+        this.setStdchance(getStdchance() + 5);
         }
 
-    }
 
 
-
-    public void STDGIVING(){
-        String[] arr = {
-                "Robbie rotten virus",
-                "HIV",
-                "AIDS",
-                "Kinderziekte",
-                "Genital warts",
-                "Herpes",
-                "Hepatitis",
-                "Chlamydia",
-                "Cholera",
-                "Crabs"
-        };
-        Random random5 = new Random();
-        int STD = random5.nextInt(10);
-        this.setSTD(arr[STD]);
-
-    }
 
 
     public boolean marry(Human partner) {
@@ -120,6 +116,9 @@ public class Human extends Mammal {
     //abstract methods
     @Override
     public void suckle() {
+        new SuckleDispatcherThread(this).run();
+        System.out.println("New suckledispatcherthread");
+
     }
 
 
@@ -142,9 +141,7 @@ public class Human extends Mammal {
         }
     }
 
-    public boolean isUsesBirthControl() {
-        return usesBirthControl;
-    }
+
 
     public String getLastName() {
         return LastName;
@@ -171,14 +168,46 @@ public class Human extends Mammal {
    this.LastName = lastName;
     }
 
-    public String getSTD() {
-        return STD;
+    @Override
+    public int getMaxNumberOfEggs() {
+        return maxNumberOfEggs;
     }
 
-    public void setSTD(String STD) {
-        this.STD = STD;
+    @Override
+    public void setMaxNumberOfEggs(int maxNumberOfEggs) {
+        this.maxNumberOfEggs = maxNumberOfEggs;
     }
 
+    public String getStd() {
+        return std;
+    }
 
+    public void setStd(String std) {
+        this.std = std;
+    }
 
+    public int getGetcaught() {
+        return getcaught;
+    }
+
+    public void setGetcaught(int getcaught) {
+        this.getcaught = getcaught;
+    }
+
+    public int getStdchance() {
+        return stdchance;
+    }
+
+    public void setStdchance(int stdchance) {
+        this.stdchance = stdchance;
+    }
+
+    public boolean isUsesbirthcontrol() {
+        return usesbirthcontrol;
+    }
+
+    public void setUsesbirthcontrol(boolean usesbirthcontrol) {
+        this.usesbirthcontrol = usesbirthcontrol;
+    }
 }
+

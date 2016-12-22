@@ -117,19 +117,8 @@ public class Zoo {
         this.name = name;
     }
 
-    public ArrayList getReptileEggHatcherThread() {
-       return ReptileEggHatcherThread;
-   }
-   public void setReptileEggHatcherThread(ArrayList ReptileEggHatcherThread) {
-        this.ReptileEggHatcherThread = ReptileEggHatcherThread;
-    }
 
-    public TreeSet<Cage> getCages() {
-        return cages;
-    }
 
-    public void setCages(TreeSet<Cage> cages) {
-        this.cages = cages;
-    }
+
 
 }

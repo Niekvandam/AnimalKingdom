@@ -1,5 +1,6 @@
 package general;
 
+import mammals.Human;
 import threads.OvulatingThread;
 import zoo.Zoo;
 
@@ -12,8 +13,9 @@ public class Female extends Gender {
     private ArrayList<Egg> eggs = new ArrayList();
     private OvulatingThread ovThread;
     private ArrayList<Egg> inseminatedEggs = new ArrayList();
-
     //Female constructor
+
+
     public Female() {
         Random r = new Random();
         int i = r.nextInt(10);
@@ -67,12 +69,10 @@ public class Female extends Gender {
     @Override
     public void propagate(Animal parent1, Animal parent2) {
         this.ovulate();
-        if (parent1.getClass().equals(parent2.getClass())) {
+         if (parent1.getClass().equals(parent2.getClass())) {
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
-                egg.getEmbryo().getName();
-                System.out.println(egg.getEmbryo().getName());
             }
 
             } else{
@@ -80,7 +80,6 @@ public class Female extends Gender {
 
             }
         }
-
 
 
     @Override

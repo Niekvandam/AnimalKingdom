@@ -34,11 +34,11 @@ public class AnimalKingdom1 {
 
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 
-        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null);
+        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
 
-        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null);
-        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null);
-        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3, null);
+        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null, false);
+        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null, false);
+        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3, null, false);
 
 
         Snake snake = new Snake(new Male(), "Scales", "Rick", "Black", 3, 10);
@@ -50,15 +50,10 @@ public class AnimalKingdom1 {
       //  GiantCookie.MakeLove(Homosapien);
 
 
-          //   p1.getGender().propagate(p, p1);
-       //     System.out.println(p.layEggs());
 
-
-             snekkinator.getGender().propagate(snekkinator, snake);
-
-             System.out.println(snekkinator.layEggs());
-
-
+            GiantCookie.setUsesbirthcontrol(false);
+            GiantCookie.MakeLove(PizzaMan);
+            System.out.println(GiantCookie.getStd());
 //             System.out.println("Is your wife not pregnant? true or false? " + snekkinator.giveBirth());
 //
 //             System.out.println(snekkinator.isNotPregnant());

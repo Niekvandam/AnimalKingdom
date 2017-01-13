@@ -71,21 +71,21 @@ public class Zoo {
     }
 
     public Cage getCageByRace(Class<? extends Animal> race) {
-        for (Cage c : this.cages ) {
-            String type = c.getCageType();
-            String className = race.getSimpleName();
-            if (type.equals(className)) {
+        for (Cage c : cages) {
+            c.getCageType();
+            if (race.getSimpleName().equals(c.getCageType())) {
                 return c;
-            }  else {
-                return null;
+            } else {
+
             }
         }
-       return aCage;
-  }
+        Cage c = new Cage(race.getSimpleName());
+        cages.add(c);
+        return c;
+    }
 
     public ArrayList<Animal> getAllAnimalsByRace(Class<? extends Animal> race) {
         Cage aCage = getCageByRace(Animal.class);
-
         return aCage.getCagedAnimals();
     }
 
@@ -94,11 +94,14 @@ public class Zoo {
         for(Cage c : cages){
        ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
         }
-        return null;
+        return aCage.getCagedAnimals();
     }
 
     public ArrayList<Animal> getAllAnimals() {
-        return null;
+        for (Animal animalsOfSpecies  : this.getAllAnimalsBySpecies(Animal.class)) {
+        System.out.println(animalsOfSpecies);
+        }
+
     }
 
 

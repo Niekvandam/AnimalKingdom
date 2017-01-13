@@ -46,7 +46,7 @@ public abstract class Animal {
         return giveBirth;
     }
 
-    public String Propagate(Animal partner) {
+    public String propagate(Animal partner) {
 //        if (this.getClass().getSimpleName() != partner.getClass().getSimpleName()) {
 //            System.out.println("Can't propagate because it's not the same species");
 //        } else {

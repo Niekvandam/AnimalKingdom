@@ -62,9 +62,13 @@ public class Female extends Gender {
     //Abstract methods
     @Override
     public boolean isNotPregnant() {
+        if (inseminatedEggs.isEmpty()) {
+           inseminatedEggs.isEmpty();
+        } else {
+            System.out.println("She's pregnant mate");
+        }
         return inseminatedEggs.isEmpty();
     }
-
 
     @Override
     public void propagate(Animal parent1, Animal parent2) {
@@ -73,6 +77,9 @@ public class Female extends Gender {
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
+                egg.getEmbryo().getName();
+                egg.getEmbryo().getColor();
+                egg.getEmbryo().getWeight();
             }
 
             } else{

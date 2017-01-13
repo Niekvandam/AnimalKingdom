@@ -1,17 +1,16 @@
 package animalkingdom1;
-
+import birds.Pinguin;
+import birds.Bird;
 import birds.Parrot;
+import general.Animal;
 import general.Female;
 import general.Male;
-import mammals.AfricanElephant;
-import mammals.AsianElephant;
-import mammals.Elephant;
-import mammals.GrayMouse;
-import mammals.WhiteMouse;
-import mammals.Human;
+import mammals.*;
 import reptiles.Snake;
 import zoo.Cage;
 import zoo.Zoo;
+
+import java.util.ArrayList;
 
 public class AnimalKingdom1 {
 
@@ -22,7 +21,7 @@ public class AnimalKingdom1 {
         Parrot p = new Parrot(new Male(), "Feathers", "Johan IV", "Blue", 0.18, 5);
         Parrot p1 = new Parrot(new Female(), "Feathers", "Johan IV", "Blue", 0.18, 5);
 
-//        Pinguin pingu = new Pinguin(new Male(), "Fur", "Klaus XVI", "Black and Gray", 0.5, 8);
+        Pinguin pingu = new Pinguin(new Male(), "Fur", "Klaus XVI", "Black and Gray", 0.5, 8);
 
         AfricanElephant Jan = new AfricanElephant(new Male(), "Skin", "Archibald gerard", "Gray", 800, 2, 3);
 
@@ -34,7 +33,7 @@ public class AnimalKingdom1 {
 
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 
-        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
+   //     Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
 
         Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null, false);
         Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null, false);
@@ -46,22 +45,12 @@ public class AnimalKingdom1 {
 
         //Animal test methods
 
-       // GiantCookie.marry(Homosapien);
-      //  GiantCookie.MakeLove(Homosapien);
+        Cage c = Zoo.getInstance().getCageOfAnimal(p1);
+        System.out.println(c);
+
+        Cage c1 = Zoo.getInstance().getCageByRace(Bird.class);
+        System.out.println(c1);
 
 
-
-            GiantCookie.setUsesbirthcontrol(false);
-            GiantCookie.MakeLove(PizzaMan);
-            System.out.println(GiantCookie.getStd());
-//             System.out.println("Is your wife not pregnant? true or false? " + snekkinator.giveBirth());
-//
-//             System.out.println(snekkinator.isNotPregnant());
-
-
-
-
-
-    }
 
 }

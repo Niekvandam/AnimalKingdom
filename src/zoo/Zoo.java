@@ -101,7 +101,7 @@ public class Zoo {
         for (Animal animalsOfSpecies  : this.getAllAnimalsBySpecies(Animal.class)) {
         System.out.println(animalsOfSpecies);
         }
-
+        return null;
     }
 
 

@@ -9,14 +9,13 @@ import java.util.TreeSet;
 
 public class Zoo {
 
-    private TreeSet<Cage> cages = new TreeSet();
-    protected String name;
     private static Zoo instance;
+    protected String name;
+    private TreeSet<Cage> cages = new TreeSet();
     private ArrayList ReptileEggHatcherThread;
     private Cage aCage;
-    
 
-    
+
     //Constructors
     public Zoo() {
         this.cages = new TreeSet();
@@ -27,15 +26,15 @@ public class Zoo {
         this.cages = new TreeSet();
     }
 
-//methods
+    //methods
     public static Zoo getInstance(String name) {
         if (instance == null) {
             instance = new Zoo(name);
         }
         return instance;
     }
-    
-   public static Zoo getInstance() {
+
+    public static Zoo getInstance() {
         if (instance == null) {
             instance = new Zoo();
         }
@@ -49,8 +48,8 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal anAnimal) {
-          Cage aCage = getCageOfAnimal(anAnimal);
-        if (aCage == null){
+        Cage aCage = getCageOfAnimal(anAnimal);
+        if (aCage == null) {
             aCage = new Cage(anAnimal.getClass().getSimpleName());
             cages.add(aCage);
         }
@@ -91,23 +90,23 @@ public class Zoo {
 
     public ArrayList<Animal> getAllAnimalsBySpecies(Class<? extends Animal> species) {
         ArrayList<Cage> cages = getCagesBySpecies(Animal.class);
-        for(Cage c : cages){
-       ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
+        for (Cage c : cages) {
+            ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
         }
         return aCage.getCagedAnimals();
     }
 
     public ArrayList<Animal> getAllAnimals() {
-        for (Animal animalsOfSpecies  : this.getAllAnimalsBySpecies(Animal.class)) {
-        System.out.println(animalsOfSpecies);
+        for (Animal animalsOfSpecies : this.getAllAnimalsBySpecies(Animal.class)) {
+            System.out.println(animalsOfSpecies);
         }
-
+        return null;
     }
 
 
-  public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {
-      Cage reptileCage = getCageByRace(reptileEggs.get(0).getEmbryo().getClass());
-      new ReptileEggHatcherThread(reptileCage, reptileEggs).start();
+    public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {
+        Cage reptileCage = getCageByRace(reptileEggs.get(0).getEmbryo().getClass());
+        new ReptileEggHatcherThread(reptileCage, reptileEggs).start();
 
     }
 
@@ -119,9 +118,6 @@ public class Zoo {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
 
 
 }

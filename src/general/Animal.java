@@ -1,18 +1,24 @@
 package general;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 import zoo.Zoo;
+
+import java.util.ArrayList;
 
 public abstract class Animal {
 
-    private Gender gender;
+    //Animal methods
+    protected int maxNumberOfEggs;
+    protected String bodyCovering;
+    protected String name;
 
+    //ArrayLists
+    protected String color;
+    protected double weight;
+    private Gender gender;
     //Animal constructor
     public Animal() {
 
     }
-
     public Animal(Gender gender, String bodyCovering, String name, String color, double weight, int maxNumberOfEggs) {
         this.bodyCovering = bodyCovering;
         this.gender = gender;
@@ -24,16 +30,6 @@ public abstract class Animal {
         Zoo z = Zoo.getInstance();
         boolean b = z.addAnimal(this);
     }
-
-    //ArrayLists
-
-
-    //Animal methods
-    protected int maxNumberOfEggs;
-    protected String bodyCovering;
-    protected String name;
-    protected String color;
-    protected double weight;
 
     public abstract String communicate();
 
@@ -50,13 +46,12 @@ public abstract class Animal {
 //        if (this.getClass().getSimpleName() != partner.getClass().getSimpleName()) {
 //            System.out.println("Can't propagate because it's not the same species");
 //        } else {
-            partner.gender.propagate(this, partner);
-            this.gender.propagate(partner, this);
-            System.out.println("Propagating...");
-            this.gender.propagate(this, partner);
+        partner.gender.propagate(this, partner);
+        this.gender.propagate(partner, this);
+        System.out.println("Propagating...");
+        this.gender.propagate(this, partner);
         return ("Propagation complete");
-        }
-
+    }
 
 
     public boolean isNotPregnant() {
@@ -72,9 +67,9 @@ public abstract class Animal {
         this.bodyCovering = bodyCovering;
     }
 
-    public String getName() {                        
-        return name;                                            
-    }                                                                   
+    public String getName() {
+        return name;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -100,16 +95,16 @@ public abstract class Animal {
         return gender;
     }
 
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
     public int getMaxNumberOfEggs() {
         return maxNumberOfEggs;
     }
 
     public void setMaxNumberOfEggs(int maxNumberOfEggs) {
         this.maxNumberOfEggs = maxNumberOfEggs;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
     }
 
 }

@@ -1,8 +1,6 @@
 package general;
 
-import mammals.Human;
 import threads.OvulatingThread;
-import zoo.Zoo;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -63,7 +61,7 @@ public class Female extends Gender {
     @Override
     public boolean isNotPregnant() {
         if (inseminatedEggs.isEmpty()) {
-           inseminatedEggs.isEmpty();
+            inseminatedEggs.isEmpty();
         } else {
             System.out.println("She's pregnant mate");
         }
@@ -73,7 +71,7 @@ public class Female extends Gender {
     @Override
     public void propagate(Animal parent1, Animal parent2) {
         this.ovulate();
-         if (parent1.getClass().equals(parent2.getClass())) {
+        if (parent1.getClass().equals(parent2.getClass())) {
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
@@ -82,11 +80,11 @@ public class Female extends Gender {
                 egg.getEmbryo().getWeight();
             }
 
-            } else{
-                System.out.println("Can't fuck with da beast boii");
+        } else {
+            System.out.println("Can't fuck with da beast boii");
 
-            }
         }
+    }
 
 
     @Override

@@ -1,39 +1,34 @@
 package general;
-import general.Animal;
+
 import java.util.ArrayList;
 
-public abstract class Gender { 
-        
-         //Constructor
-         public Gender(){
-         
-      }
-      
-         
-          //Methods
-          private Animal genderOwner;
+public abstract class Gender {
 
-           public abstract boolean isNotPregnant();
-          
-         public abstract void propagate (Animal parent1, Animal parent2 );
-    
-         public abstract ArrayList<Egg> giveBirth();     
+    //Methods
+    private Animal genderOwner;
 
-         public abstract boolean isFemale();
-        
-      
-    
-         
-         //Setters and getters
-         public void setGenderOwner(Animal owner){
-         this.genderOwner = owner;
-         }
+
+    //Constructor
+    public Gender() {
+
+    }
+
+    public abstract boolean isNotPregnant();
+
+    public abstract void propagate(Animal parent1, Animal parent2);
+
+    public abstract ArrayList<Egg> giveBirth();
+
+    public abstract boolean isFemale();
 
     public Animal getGenderOwner() {
         return genderOwner;
     }
- 
 
-    
-    
+    //Setters and getters
+    public void setGenderOwner(Animal owner) {
+        this.genderOwner = owner;
+    }
+
+
 }

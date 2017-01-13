@@ -6,9 +6,7 @@ import general.Animal;
 import general.Female;
 import general.Male;
 import mammals.*;
-import reptiles.Reptile;
 import reptiles.Snake;
-import special.Platypus;
 import zoo.Cage;
 import zoo.Zoo;
 
@@ -17,6 +15,7 @@ import java.util.ArrayList;
 public class AnimalKingdom1 {
 
     public static void main(String[] args) throws InterruptedException {
+
 
 
         Parrot p = new Parrot(new Male(), "Feathers", "Johan IV", "Blue", 0.18, 5);
@@ -34,7 +33,7 @@ public class AnimalKingdom1 {
 
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 
-        //     Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
+   //     Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
 
         Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null, false);
         Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null, false);
@@ -42,7 +41,7 @@ public class AnimalKingdom1 {
 
 
         Snake snake = new Snake(new Male(), "Scales", "Rick", "Black", 3, 10);
-        Snake snekkinator = new Snake(new Female(), "Scales", "Coen", "Black and blue", 5, 15);
+        Snake snekkinator = new Snake(new Female(), "Scales", "Coen", "Black and blue", 5 , 15);
 
         //Animal test methods
 
@@ -53,5 +52,5 @@ public class AnimalKingdom1 {
         System.out.println(c1);
 
 
-    }
+
 }

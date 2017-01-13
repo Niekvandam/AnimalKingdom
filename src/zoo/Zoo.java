@@ -4,6 +4,7 @@ import general.Animal;
 import general.Egg;
 import threads.ReptileEggHatcherThread;
 
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
@@ -89,18 +90,30 @@ public class Zoo {
     }
 
     public ArrayList<Animal> getAllAnimalsBySpecies(Class<? extends Animal> species) {
+        //Maak lege arraylist aan van het resultaat wat we terug gaan geven
+        ArrayList<Animal> animalsBySpecies = new ArrayList<>();
+
+        //Het class type van "species" moet abstract zijn, anders ist janken
+        if(!Modifier.isAbstract(species.getModifiers())) {
+            //Deze is nog leeg wantja
+            return animalsBySpecies;
+        }
+
+
         ArrayList<Cage> cages = getCagesBySpecies(Animal.class);
         for (Cage c : cages) {
             ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
+            if(animalsOfCage.size() <= 0) {
+                //TODO: Zelf oplossen, wat doet het, wat zou het moeten doen als dit waar is?
+            }
+            //TODO: Zelf oplossen, wat doet het? Common sense met de naam ofzo, wat zou het moeten doen? fix ff
+            animalsBySpecies.addAll();
         }
         return aCage.getCagedAnimals();
     }
 
     public ArrayList<Animal> getAllAnimals() {
-        for (Animal animalsOfSpecies : this.getAllAnimalsBySpecies(Animal.class)) {
-            System.out.println(animalsOfSpecies);
-        }
-        return null;
+        return this.getAllAnimalsBySpecies(Animal.class);
     }
 
 

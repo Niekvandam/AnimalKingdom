@@ -1,7 +1,10 @@
 package zoo;
 
+import birds.Bird;
 import general.Animal;
 import general.Egg;
+import mammals.Mammal;
+import reptiles.Reptile;
 import threads.ReptileEggHatcherThread;
 
 import java.lang.reflect.Modifier;
@@ -67,8 +70,21 @@ public class Zoo {
     }
 
     public ArrayList<Cage> getCagesBySpecies(Class<? extends Animal> species) {
-        return null;
+        ArrayList<Cage> cages = new ArrayList();
+        ArrayList<Class<?extends Animal>> allspecies = new ArrayList<>();
+        allspecies.add(Animal.class);
+        allspecies.add(Reptile.class);
+        allspecies.add(Mammal.class);
+        allspecies.add(Bird.class);
+
+        if(!Modifier.isAbstract(species.getModifiers()) ||  !allspecies.contains(species)){
+            return cages;
+        }
+        for (Cage cage : this.cages) {
+          String cageRace = cage.getCageType()
+        }
     }
+
 
     public Cage getCageByRace(Class<? extends Animal> race) {
         for (Cage c : cages) {
@@ -98,16 +114,17 @@ public class Zoo {
             //Deze is nog leeg wantja
             return animalsBySpecies;
         }
-
-
-        ArrayList<Cage> cages = getCagesBySpecies(Animal.class);
+        ArrayList<Cage> cages = getCagesBySpecies(species);
         for (Cage c : cages) {
             ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
             if(animalsOfCage.size() <= 0) {
-                //TODO: Zelf oplossen, wat doet het, wat zou het moeten doen als dit waar is?
+                continue;
+                                                                                 //TODO: Zelf oplossen, wat doet het, wat zou het moeten doen als dit waar is?
             }
-            //TODO: Zelf oplossen, wat doet het? Common sense met de naam ofzo, wat zou het moeten doen? fix ff
-            animalsBySpecies.addAll();
+                                                                              //TODO: Zelf oplossen, wat doet het? Common sense met de naam ofzo, wat zou het moeten doen? fix ff
+          animalsBySpecies.addAll(animalsOfCage);
+
+
         }
         return aCage.getCagedAnimals();
     }

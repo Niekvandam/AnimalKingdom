@@ -31,6 +31,7 @@ public abstract class Mammal extends Animal implements IMammal {
     }
 
 
+    @SuppressWarnings("SameReturnValue")
     public ArrayList<IMammal> getBabies() {
         return babies;
     }

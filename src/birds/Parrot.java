@@ -28,11 +28,9 @@ public class Parrot extends Bird {
         return ("Fly like a " + className);
     }
 
-    @Override
-    public void hatchEggs(ArrayList<Egg> layedEggs) {
 
     }
 
 
-}
+
 

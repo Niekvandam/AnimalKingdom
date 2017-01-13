@@ -46,6 +46,8 @@ public class Cage implements Comparable {
         return true;
     }
 
+
+
     public ArrayList<Animal> getCagedAnimals() {
         return cagedAnimals;
     }

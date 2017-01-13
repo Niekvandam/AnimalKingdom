@@ -24,7 +24,7 @@ public abstract class Bird extends Animal implements IBird {
         return null;
     }
 
-    public void hatchEggs(ArrayList<Egg> layedEggs) {
+    public void hatchEggs(ArrayList<Egg> layedEggs){
         Zoo z = new Zoo();
         for (Egg e : layedEggs) {
             Animal b = e.getEmbryo();
@@ -32,6 +32,8 @@ public abstract class Bird extends Animal implements IBird {
             z.addAnimal(b);
         }
     }
+
+
 
 
 }

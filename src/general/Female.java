@@ -9,7 +9,6 @@ import java.util.Random;
 public class Female extends Gender {
 
     private ArrayList<Egg> eggs = new ArrayList();
-    private OvulatingThread ovThread;
     private ArrayList<Egg> inseminatedEggs = new ArrayList();
     //Female constructor
 
@@ -19,14 +18,14 @@ public class Female extends Gender {
         int i = r.nextInt(10);
         i++;
         i = i * 1000;
-        ovThread = new OvulatingThread(this, i);
+        OvulatingThread ovThread = new OvulatingThread(this, i);
         ovThread.start();
         r = null;
     }
 
     //methods
     public void ovulate() {
-        if (this.isNotPregnant() == false) {
+        if (!this.isNotPregnant()) {
             System.out.println("You can't ovulate when you're pregnant");
         } else {
             int i = this.getGenderOwner().getMaxNumberOfEggs();
@@ -40,7 +39,7 @@ public class Female extends Gender {
     }
 
     public void menstruate() {
-        if (this.isNotPregnant() == false) {
+        if (!this.isNotPregnant()) {
             System.out.println("You can't menstruate when you're pregnant");
         } else {
             eggs.clear();
@@ -75,9 +74,6 @@ public class Female extends Gender {
             for (Egg egg : this.eggs) {
                 egg.inseminate(parent1, parent2);
                 inseminatedEggs.add(egg);
-                egg.getEmbryo().getName();
-                egg.getEmbryo().getColor();
-                egg.getEmbryo().getWeight();
             }
 
         } else {

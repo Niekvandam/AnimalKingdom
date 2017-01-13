@@ -40,7 +40,7 @@ public class Human extends Mammal {
     }
 
     public void MakeLove(Human partner) {
-        if (this.isUsesbirthcontrol() == true) {
+        if (!this.isUsesbirthcontrol()) {
             setStdchance(0);
         }
         if (partner == this.partner) {
@@ -115,7 +115,7 @@ public class Human extends Mammal {
 
     @Override
     public String communicate() {
-        if (this.isMarried() == false) {
+        if (!this.isMarried()) {
             String[] arr = {
                     "Y u gotta be so rude don't you know I'm human too", "I am Human and I am slav", "Memes are the most important thing in life", "Bush did 9/11"};
             Random random = new Random();

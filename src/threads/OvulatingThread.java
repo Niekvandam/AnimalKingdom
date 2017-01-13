@@ -17,6 +17,7 @@ public class OvulatingThread extends Thread {
         super.run();
         try {
             sleep(initialDelay);
+            //noinspection InfiniteLoopStatement
             while (true) {
 
                 fem.ovulate();

@@ -13,9 +13,8 @@ public class GrayMouse extends Mouse {
         super();
     }
 
-    @Override
-    public void suckle() {
 
-    }
+
+
 
 }

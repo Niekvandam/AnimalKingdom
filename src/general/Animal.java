@@ -39,7 +39,7 @@ public abstract class Animal {
 
     public ArrayList<Egg> giveBirth() {
         ArrayList<Egg> giveBirth = this.getGender().giveBirth();
-        return giveBirth;
+       return giveBirth;
     }
 
     public String propagate(Animal partner) {
@@ -67,6 +67,7 @@ public abstract class Animal {
         this.bodyCovering = bodyCovering;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public String getName() {
         return name;
     }

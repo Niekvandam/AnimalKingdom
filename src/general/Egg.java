@@ -2,18 +2,13 @@ package general;
 
 import birds.Parrot;
 import birds.Pinguin;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
-import mammals.AfricanElephant;
-import mammals.AsianElephant;
-import mammals.GrayMouse;
-import mammals.Human;
-import mammals.WhiteMouse;
+import mammals.*;
 import reptiles.Crocodile;
 import reptiles.Snake;
 import special.Platypus;
-import zoo.Zoo;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Egg {
 
@@ -23,14 +18,14 @@ public class Egg {
 
     //Egg constructor
     public Egg() {
-    
+
     }
 
     //Egg methods
     public boolean isInseminated() {
         return embryo != null;
     }
-    
+
     public Animal getEmbryo() {
         return embryo;
     }
@@ -106,7 +101,7 @@ public class Egg {
                     embryo.setMaxNumberOfEggs(parent2.getMaxNumberOfEggs());
                     embryo.setWeight((int) parent2.getWeight());
                     ((AfricanElephant) embryo).setEarSize(((AfricanElephant) parent2).getEarSize());
-                     embryo.setName(this.namegiving());
+                    embryo.setName(this.namegiving());
                 }
 
                 break;
@@ -254,77 +249,77 @@ public class Egg {
         }
     }
 
-    public String namegiving(){
+    public String namegiving() {
         String[] arr = {
-            "Gay",
-            "Dexter",
-            "Fern",
-            "Theola",
-            "Rosalinda",
-            "Arnetta",
-            "Tyra",
-            "Teisha ",
-            "Klara",
-            "Dallas",
-            "Lien",
-            "Thomasine",
-            "Evie",
-            "Elyse ",
-            "Bettina",
-            "Ernesto",
-            "Earline",
-            "Margherita ",
-            "Monika",
-            "Andy ",
-            "Lilliana",
-            "Everette ",
-            "Keesha",
-            "Ellie",
-            "Shaneka",
-            "Henry ",
-            "Ashleigh",
-            "Melvina ",
-            "Hallie",
-            "Adrien ",
-            "Xiao",
-            "Evette ",
-            "Sigrid",
-            "Yetta",
-            "Tam",
-            "Kelli ",
-            "Desmond",
-            "Livia",
-            "Michelle",
-            "Angel",
-            "WHEN YOU Buster NUT BUT SHE KEEPS GOING",
-            "Mauricio",
-            "Angie",
-            "Ericka",
-            "Latonya",
-            "Donny",
-            "Ruth",
-            "Kira ",
-            "Jamie",
-            "Claudine",
-            "Freek vonk",
-            "vonkboi",
-            "Robbie Rotten",
-            "Sportaflop",
-            "Flobbie Flotten",
-            "Tobbie Totten",
-            "Bobbie Botten",
-            "Arrogante kut pop",
-            "Stingy",
-            "Pink haired girl",
-            "Mine guy",
-            "Parking meter",
-            "Triagonal sign",
-            "Archibald johan gerard ",
-            "Gandalf"
+                "Gay",
+                "Dexter",
+                "Fern",
+                "Theola",
+                "Rosalinda",
+                "Arnetta",
+                "Tyra",
+                "Teisha ",
+                "Klara",
+                "Dallas",
+                "Lien",
+                "Thomasine",
+                "Evie",
+                "Elyse ",
+                "Bettina",
+                "Ernesto",
+                "Earline",
+                "Margherita ",
+                "Monika",
+                "Andy ",
+                "Lilliana",
+                "Everette ",
+                "Keesha",
+                "Ellie",
+                "Shaneka",
+                "Henry ",
+                "Ashleigh",
+                "Melvina ",
+                "Hallie",
+                "Adrien ",
+                "Xiao",
+                "Evette ",
+                "Sigrid",
+                "Yetta",
+                "Tam",
+                "Kelli ",
+                "Desmond",
+                "Livia",
+                "Michelle",
+                "Angel",
+                "WHEN YOU Buster NUT BUT SHE KEEPS GOING",
+                "Mauricio",
+                "Angie",
+                "Ericka",
+                "Latonya",
+                "Donny",
+                "Ruth",
+                "Kira ",
+                "Jamie",
+                "Claudine",
+                "Freek vonk",
+                "vonkboi",
+                "Robbie Rotten",
+                "Sportaflop",
+                "Flobbie Flotten",
+                "Tobbie Totten",
+                "Bobbie Botten",
+                "Arrogante kut pop",
+                "Stingy",
+                "Pink haired girl",
+                "Mine guy",
+                "Parking meter",
+                "Triagonal sign",
+                "Archibald johan gerard ",
+                "Gandalf"
         };
         Random random = new Random();
         int select = random.nextInt(arr.length);
-        return(arr[select]);
-        }
+        return (arr[select]);
+    }
 
 }

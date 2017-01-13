@@ -1,10 +1,6 @@
 package threads;
 
-import animalkingdom1.AnimalKingdom1;
-import general.Animal;
 import general.Female;
-import general.Male;
-import mammals.Human;
 
 public class OvulatingThread extends Thread {
 

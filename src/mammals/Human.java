@@ -1,6 +1,5 @@
 package mammals;
 
-import general.Female;
 import general.Gender;
 import threads.SuckleDispatcherThread;
 
@@ -9,12 +8,12 @@ import java.util.Random;
 
 public class Human extends Mammal {
 
+    public String std;
+    public boolean usesbirthcontrol;
     private String LastName;
     private String insertion;
     private int maxNumberOfEggs;
     private Human partner;
-    public String std;
-    public boolean usesbirthcontrol;
     private int getcaught = 50;
     private int stdchance = 5;
 
@@ -29,33 +28,29 @@ public class Human extends Mammal {
     }
 
 
-
     //methods
-    public void MakeLove(){
-    System.out.println("I am making love and I am single");
+    public void MakeLove() {
+        System.out.println("I am making love and I am single");
         Random randomGenerator = new Random();
         int randomInt1 = randomGenerator.nextInt(100);
-    if(randomInt1 <= stdchance){
-        this.setStd("Chlamydia and Cholera in one.. so basically AIDS");
-    }
-    this.setStdchance(getStdchance() + 5);
+        if (randomInt1 <= stdchance) {
+            this.setStd("Chlamydia and Cholera in one.. so basically AIDS");
+        }
+        this.setStdchance(getStdchance() + 5);
     }
 
     public void MakeLove(Human partner) {
-        if(this.isUsesbirthcontrol() == true){
+        if (this.isUsesbirthcontrol() == true) {
             setStdchance(0);
         }
-            if (partner == this.partner) {
+        if (partner == this.partner) {
             this.marriageLove(partner);
         } else if (this.partner == null && partner.partner == null) {
             this.MakeLove();
         } else {
-                this.adulteryLove(partner);
-            }
+            this.adulteryLove(partner);
         }
-
-
-
+    }
 
 
     public void marriageLove(Human partner) {
@@ -74,15 +69,12 @@ public class Human extends Mammal {
             System.out.println("Your new partner is: " + this.getPartner());
             System.out.println("You're alone now fgt");
         }
-        if (randomInt <= stdchance){
+        if (randomInt <= stdchance) {
             this.setStd("Aids");
         }
         this.setGetcaught(getGetcaught() + 5);
         this.setStdchance(getStdchance() + 5);
-        }
-
-
-
+    }
 
 
     public boolean marry(Human partner) {
@@ -112,7 +104,6 @@ public class Human extends Mammal {
     }
 
 
-
     //abstract methods
     @Override
     public void suckle() {
@@ -122,18 +113,17 @@ public class Human extends Mammal {
     }
 
 
-
     @Override
     public String communicate() {
         if (this.isMarried() == false) {
             String[] arr = {
-                "Y u gotta be so rude don't you know I'm human too", "I am Human and I am slav", "Memes are the most important thing in life", "Bush did 9/11"};
+                    "Y u gotta be so rude don't you know I'm human too", "I am Human and I am slav", "Memes are the most important thing in life", "Bush did 9/11"};
             Random random = new Random();
             int select = random.nextInt(arr.length);
             return (name + " says:            " + arr[select]);
         } else {
             String[] arr = {
-                "Sad life married life", "Why did I get married agian?", "WE NEED MORE CHEESE", "Oioi boi I am married fgt"};
+                    "Sad life married life", "Why did I get married agian?", "WE NEED MORE CHEESE", "Oioi boi I am married fgt"};
             Random random = new Random();
             int select = random.nextInt(arr.length);
             return (name + " says:            " + arr[select]);
@@ -142,30 +132,28 @@ public class Human extends Mammal {
     }
 
 
-
     public String getLastName() {
         return LastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.LastName = lastName;
     }
 
     public String getInsertion() {
         return insertion;
     }
 
+    public void setInsertion(String insertion) {
+        this.insertion = insertion;
+    }
 
-
-  public Human getPartner() {
+    public Human getPartner() {
         return partner;
     }
+
     public void setPartner(Human partner) {
         this.partner = partner;
-    }
-
-    public void setInsertion(String insertion) {
-     this.insertion = insertion;
-    }
-
-    public void setLastName(String lastName) {
-   this.LastName = lastName;
     }
 
     @Override

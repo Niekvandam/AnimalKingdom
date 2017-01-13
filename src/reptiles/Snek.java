@@ -1,11 +1,17 @@
 package reptiles;
+
 import general.Egg;
 import general.Gender;
 import zoo.Zoo;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 public class Snek extends Reptile {
+
+    public Snek(Gender gender, String bodyCovering, String name, String color, double weight, int maxNumberOfEggs) {
+        super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
+    }
 
     @Override
     public String communicate() {
@@ -20,12 +26,6 @@ public class Snek extends Reptile {
         String className = this.getClass().getName();
         return ("I am snek, I don't crawl. I fly on dank memes. I am " + className);
     }
-
-
-    public Snek(Gender gender, String bodyCovering, String name, String color, double weight, int maxNumberOfEggs) {
-        super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
-    }
-
 
     @Override
     public ArrayList<Egg> layEggs() {

@@ -2,17 +2,17 @@ package zoo;
 
 import general.Animal;
 import general.Egg;
+
 import java.util.ArrayList;
-import zoo.Cage;
 
 public class Cage implements Comparable {
 
     private ArrayList<Animal> cagedAnimals = new ArrayList();
     private String cageType;
-    
+
     //Constructor
     public Cage(String Type) {
-       this.cageType = Type;
+        this.cageType = Type;
         Zoo z = Zoo.getInstance("ICO41A");
         boolean b = z.addCage(this);
     }
@@ -25,8 +25,13 @@ public class Cage implements Comparable {
         return null;
 
     }
+
     public String getCageType() {
         return cageType;
+    }
+
+    public void setCageType(String cageType) {
+        this.cageType = cageType;
     }
 
     public void addReptileEggs(ArrayList<Egg> reptileEggs) {
@@ -45,15 +50,10 @@ public class Cage implements Comparable {
         return cagedAnimals;
     }
 
-    public void setCageType(String cageType) {
-        this.cageType = cageType;
-    }
-
     @Override
     public int compareTo(Object o) {
         return -1;
     }
-    
-    
-    
+
+
 }

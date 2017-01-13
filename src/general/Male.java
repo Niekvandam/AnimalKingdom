@@ -1,18 +1,16 @@
 package general;
 
-import general.Gender;
-import general.Animal;
 import java.util.ArrayList;
 
 public class Male extends Gender {
 
     //Male constructor
-public Male(){
-    
-}
+    public Male() {
 
-    
-  //Abstract methods
+    }
+
+
+    //Abstract methods
     @Override
     public boolean isNotPregnant() {
         System.out.println("Why did you even bother thinking a male could be pregnant");
@@ -26,8 +24,8 @@ public Male(){
 
     @Override
     public ArrayList<Egg> giveBirth() {
-      System.out.println("Does nothing but being nervous and walking in circles while waiting for the baby to be born");
-      return null;
+        System.out.println("Does nothing but being nervous and walking in circles while waiting for the baby to be born");
+        return null;
     }
 
     @Override

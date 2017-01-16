@@ -56,7 +56,7 @@ public class AnimalKingdom1 {
         GiantCookie.MakeLove(Hughmungus);
 
         GiantCookie.setStd("Aids");
-        GiantCookie.getStd();
+
 
         GiantCookie.propagate(Hughmungus);
         GiantCookie.giveLifeBirth();

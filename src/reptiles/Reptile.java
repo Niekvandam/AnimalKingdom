@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public abstract class Reptile extends Animal implements IReptile {
 
-    private ArrayList<Egg> reptileEggs;
+    private ArrayList<Egg> reptileEggs = new ArrayList<>();
 
     public Reptile() {
         super();

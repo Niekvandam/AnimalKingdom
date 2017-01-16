@@ -24,7 +24,6 @@ public class SuckleDispatcherThread extends Thread {
                 Zoo.getInstance().addAnimal((Animal) m);
 
             }
-
             mother.getBabies().clear();
 
 

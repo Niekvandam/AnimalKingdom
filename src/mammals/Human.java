@@ -15,7 +15,7 @@ public class Human extends Mammal {
     private int maxNumberOfEggs;
     private Human partner;
     private int getcaught = 50;
-    private int stdchance = 5;
+    private int stdchance = 0;
 
 
     //constructor   
@@ -23,7 +23,7 @@ public class Human extends Mammal {
         super();
     }
 
-    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs, String STD, boolean usesBirthControl) {
+    public Human(Gender gender, String bodyCovering, String name, String insertion, String LastName, String color, double weight, int maxNumberOfEggs, boolean usesBirthControl) {
         super(gender, bodyCovering, name, color, weight, maxNumberOfEggs);
     }
 
@@ -40,17 +40,22 @@ public class Human extends Mammal {
     }
 
     public void MakeLove(Human partner) {
-        if (!this.isUsesbirthcontrol()) {
+        if (this.isUsesbirthcontrol()) {
             setStdchance(0);
         }
+
         if (partner == this.partner) {
             this.marriageLove(partner);
         } else if (this.partner == null && partner.partner == null) {
             this.MakeLove();
-        } else {
+        } else if (!this.usesbirthcontrol && !partner.usesbirthcontrol) {
+        this.propagate(partner);
+            } else {
             this.adulteryLove(partner);
         }
-    }
+
+        }
+
 
 
     public void marriageLove(Human partner) {

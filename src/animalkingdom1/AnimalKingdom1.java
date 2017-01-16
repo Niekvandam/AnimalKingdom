@@ -6,6 +6,8 @@ import general.Animal;
 import general.Female;
 import general.Male;
 import mammals.*;
+import reptiles.Crocodile;
+import reptiles.Reptile;
 import reptiles.Snake;
 import zoo.Cage;
 import zoo.Zoo;
@@ -32,18 +34,32 @@ public class AnimalKingdom1 {
 
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 
-        //     Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, null, false);
+        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, false);
 
-        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, null, false);
-        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, null, false);
-        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3, null, false);
+        Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, false);
+        Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, false);
+        Human Hughmungus = new Human(new Male(), "Skin and Hair", "Ivan", "teh", "Slav", "Adidas", 80.1, 3, false);
 
+
+        Crocodile snake1 = new Crocodile(new Male(), "Scales", "Rick", "Black", 3, 10);
+        Crocodile snekk1inator = new Crocodile(new Female(), "Scales", "Coen", "Black and blue", 5, 15);
 
         Snake snake = new Snake(new Male(), "Scales", "Rick", "Black", 3, 10);
         Snake snekkinator = new Snake(new Female(), "Scales", "Coen", "Black and blue", 5, 15);
 
         //All methods
 
+        System.out.println(Zoo.getInstance().getAllAnimalsByRace(Human.class));
+        System.out.println(p.communicate());
+        GiantCookie.MakeLove(Homosapien);
+        GiantCookie.marry(Hughmungus);
+        GiantCookie.MakeLove(Hughmungus);
+
+        GiantCookie.setStd("Aids");
+        GiantCookie.getStd();
+
+        GiantCookie.propagate(Hughmungus);
+        GiantCookie.giveLifeBirth();
 
     }
 }

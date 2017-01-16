@@ -67,7 +67,8 @@ public class Zoo {
 
     public ArrayList<Cage> getCagesBySpeciesOfAnimal(Animal anAnimal) {
         return null;
-    }
+        }
+
 
     public ArrayList<Cage> getCagesBySpecies(Class<? extends Animal> species) {
         ArrayList<Cage> cages = new ArrayList();
@@ -81,8 +82,9 @@ public class Zoo {
             return cages;
         }
         for (Cage cage : this.cages) {
-          String cageRace = cage.getCageType()
+          String cageRace = cage.getCageType();
         }
+        return cages;
     }
 
 
@@ -101,17 +103,15 @@ public class Zoo {
     }
 
     public ArrayList<Animal> getAllAnimalsByRace(Class<? extends Animal> race) {
-        Cage aCage = getCageByRace(Animal.class);
-        return aCage.getCagedAnimals();
+        Cage aCage = getCageByRace(race);
+        ArrayList<Animal> animals = aCage.getCagedAnimals();
+        return animals;
     }
 
-    public ArrayList<Animal> getAllAnimalsBySpecies(Class<? extends Animal> species) {
-        //Maak lege arraylist aan van het resultaat wat we terug gaan geven
-        ArrayList<Animal> animalsBySpecies = new ArrayList<>();
 
-        //Het class type van "species" moet abstract zijn, anders ist janken
+    public ArrayList<Animal> getAllAnimalsBySpecies1(Class<? extends Animal> species) {
+        ArrayList<Animal> animalsBySpecies = new ArrayList<>();
         if(!Modifier.isAbstract(species.getModifiers())) {
-            //Deze is nog leeg wantja
             return animalsBySpecies;
         }
         ArrayList<Cage> cages = getCagesBySpecies(species);
@@ -119,19 +119,23 @@ public class Zoo {
             ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
             if(animalsOfCage.size() <= 0) {
                 continue;
-                                                                                 //TODO: Zelf oplossen, wat doet het, wat zou het moeten doen als dit waar is?
             }
-                                                                              //TODO: Zelf oplossen, wat doet het? Common sense met de naam ofzo, wat zou het moeten doen? fix ff
           animalsBySpecies.addAll(animalsOfCage);
-
-
         }
-        return aCage.getCagedAnimals();
+        return animalsBySpecies;
     }
 
-    public ArrayList<Animal> getAllAnimals() {
-        return this.getAllAnimalsBySpecies(Animal.class);
-    }
+//    public ArrayList<Animal> getAllAnimalsBySpecies(Class<? extends Animal> species) {
+//        Cage cages = getCagesBySpecies();
+//        for (Cage animalsOfCage : cages) {
+//            animalsOfCage.getCagedAnimals();
+//        }
+//    }
+
+
+//    public ArrayList<Animal> getAllAnimals() {
+//        return this.getAllAnimalsBySpecies(Animal.class);
+//    }
 
 
     public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {

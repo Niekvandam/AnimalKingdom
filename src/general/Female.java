@@ -25,7 +25,7 @@ public class Female extends Gender {
 
     //methods
     public void ovulate() {
-        if (!this.isNotPregnant()) {
+        if (this.isPregnant()) {
             System.out.println("You can't ovulate when you're pregnant");
         } else {
             int i = this.getGenderOwner().getMaxNumberOfEggs();
@@ -39,7 +39,7 @@ public class Female extends Gender {
     }
 
     public void menstruate() {
-        if (!this.isNotPregnant()) {
+        if (this.isPregnant()) {
             System.out.println("You can't menstruate when you're pregnant");
         } else {
             eggs.clear();
@@ -58,13 +58,8 @@ public class Female extends Gender {
 
     //Abstract methods
     @Override
-    public boolean isNotPregnant() {
-        if (inseminatedEggs.isEmpty()) {
-            inseminatedEggs.isEmpty();
-        } else {
-            System.out.println("She's pregnant mate");
-        }
-        return inseminatedEggs.isEmpty();
+    public boolean isPregnant() {
+        return !inseminatedEggs.isEmpty();
     }
 
     @Override

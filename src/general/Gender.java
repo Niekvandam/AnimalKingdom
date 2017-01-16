@@ -13,7 +13,7 @@ public abstract class Gender {
 
     }
 
-    public abstract boolean isNotPregnant();
+    public abstract boolean isPregnant();
 
     public abstract void propagate(Animal parent1, Animal parent2);
 

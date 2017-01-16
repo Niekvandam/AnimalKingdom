@@ -54,8 +54,8 @@ public abstract class Animal {
     }
 
 
-    public boolean isNotPregnant() {
-        return gender.isNotPregnant();
+    public boolean isPregnant() {
+        return gender.isPregnant();
     }
 
     //Getters and Setters

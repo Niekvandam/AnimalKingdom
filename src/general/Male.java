@@ -12,7 +12,7 @@ public class Male extends Gender {
 
     //Abstract methods
     @Override
-    public boolean isNotPregnant() {
+    public boolean isPregnant() {
         System.out.println("Why did you even bother thinking a male could be pregnant");
         return false;
     }

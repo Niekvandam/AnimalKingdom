@@ -20,7 +20,7 @@ public abstract class Bird extends Animal implements IBird {
 
     public ArrayList<Egg> layEggs() {
         this.getGender().giveBirth();
-        System.out.println("Laying eggs");
+        System.out.println("Laying eggs" );
         return null;
     }
 

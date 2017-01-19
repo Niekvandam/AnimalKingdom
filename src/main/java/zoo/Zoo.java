@@ -67,22 +67,22 @@ public class Zoo {
 
     public ArrayList<Cage> getCagesBySpeciesOfAnimal(Animal anAnimal) {
         return null;
-        }
+    }
 
 
     public ArrayList<Cage> getCagesBySpecies(Class<? extends Animal> species) {
         ArrayList<Cage> cages = new ArrayList();
-        ArrayList<Class<?extends Animal>> allspecies = new ArrayList<>();
+        ArrayList<Class<? extends Animal>> allspecies = new ArrayList<>();
         allspecies.add(Animal.class);
         allspecies.add(Reptile.class);
         allspecies.add(Mammal.class);
         allspecies.add(Bird.class);
 
-        if(!Modifier.isAbstract(species.getModifiers()) ||  !allspecies.contains(species)){
+        if (!Modifier.isAbstract(species.getModifiers()) || !allspecies.contains(species)) {
             return cages;
         }
         for (Cage cage : this.cages) {
-          String cageRace = cage.getCageType();
+            String cageRace = cage.getCageType();
         }
         return cages;
     }
@@ -111,16 +111,16 @@ public class Zoo {
 
     public ArrayList<Animal> getAllAnimalsBySpecies1(Class<? extends Animal> species) {
         ArrayList<Animal> animalsBySpecies = new ArrayList<>();
-        if(!Modifier.isAbstract(species.getModifiers())) {
+        if (!Modifier.isAbstract(species.getModifiers())) {
             return animalsBySpecies;
         }
         ArrayList<Cage> cages = getCagesBySpecies(species);
         for (Cage c : cages) {
             ArrayList<Animal> animalsOfCage = c.getCagedAnimals();
-            if(animalsOfCage.size() <= 0) {
+            if (animalsOfCage.size() <= 0) {
                 continue;
             }
-          animalsBySpecies.addAll(animalsOfCage);
+            animalsBySpecies.addAll(animalsOfCage);
         }
         return animalsBySpecies;
     }

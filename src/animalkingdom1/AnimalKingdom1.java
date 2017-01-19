@@ -34,7 +34,7 @@ public class AnimalKingdom1 {
 
         WhiteMouse Ed = new WhiteMouse(new Male(), "Hair", "Samuel L Jackson's white brother", "White", 0.2, 5);
 
-        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 3, false);
+        Human GiantCookie = new Human(new Female(), "Skin and Hair", "Homo", "de la", "Erectus", "brown", 42.0, 30, false);
 
         Human PizzaMan = new Human(new Male(), "Skin and Hair", "Homo", "de", "Erectus", "brown", 42.0, 3, false);
         Human Homosapien = new Human(new Male(), "Skin and Hair", "Homo", "een", "Erectus", "brown", 42.0, 3, false);
@@ -49,17 +49,10 @@ public class AnimalKingdom1 {
 
         //All methods
 
-        System.out.println(Zoo.getInstance().getAllAnimalsByRace(Human.class));
-        System.out.println(p.communicate());
-        GiantCookie.MakeLove(Homosapien);
-        GiantCookie.marry(Hughmungus);
-        GiantCookie.MakeLove(Hughmungus);
-
-        GiantCookie.setStd("Aids");
-
 
         GiantCookie.propagate(Hughmungus);
-        GiantCookie.giveLifeBirth();
+        System.out.println(GiantCookie.getGender().isPregnant());
+
 
     }
 }

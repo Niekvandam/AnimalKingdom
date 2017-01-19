@@ -35,7 +35,6 @@ public class Female extends Gender {
             }
 
         }
-        System.out.println("TIME FOR SEX");
     }
 
     public void menstruate() {

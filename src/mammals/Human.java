@@ -161,16 +161,6 @@ public class Human extends Mammal {
         this.partner = partner;
     }
 
-    @Override
-    public int getMaxNumberOfEggs() {
-        return maxNumberOfEggs;
-    }
-
-    @Override
-    public void setMaxNumberOfEggs(int maxNumberOfEggs) {
-        this.maxNumberOfEggs = maxNumberOfEggs;
-    }
-
     public String getStd() {
         return std;
     }

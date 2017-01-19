@@ -24,7 +24,7 @@
 <h1>Hello ${p.getName()}! </h1>
 <table border="2" cellpadding="15" width="1200">
     <tr>
-        <td> Leeftijd</td>
+        <td> Leeftijd </td>
         <td> Naam</td>
     </tr>
 

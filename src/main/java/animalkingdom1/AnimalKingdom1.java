@@ -50,8 +50,8 @@ public class AnimalKingdom1 {
         //All methods
 
 
-        GiantCookie.propagate(Hughmungus);
-        System.out.println(GiantCookie.getGender().isPregnant());
+
+        System.out.println(Zoo.getInstance().getAllAnimalsByRace(Human.class).size());
 
 
     }

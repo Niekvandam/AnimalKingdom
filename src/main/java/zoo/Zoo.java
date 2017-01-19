@@ -133,9 +133,13 @@ public class Zoo {
 //    }
 
 
-//    public ArrayList<Animal> getAllAnimals() {
-//        return this.getAllAnimalsBySpecies(Animal.class);
-//    }
+    public ArrayList<Animal> getAllAnimals() {
+    ArrayList<Animal> allAnimals = new ArrayList<>();
+    for (Cage c : cages){
+        allAnimals.addAll(c.getCagedAnimals());
+    }
+    return allAnimals;
+    }
 
 
     public void addEggsOfReptiles(ArrayList<Egg> reptileEggs) {

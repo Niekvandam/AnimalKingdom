@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>niek.animal-kingdom</groupId>
-    <artifactId>animal-kingdom</artifactId>
+    <groupId>niek.AnimalKingdom</groupId>
+    <artifactId>AnimalKingdom</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
 
     <build>
-        <finalName>animal-kingdom</finalName>
-        <directory>${project.basedir}/output</directory>
+        <finalName>AnimalKingdom</finalName>
+        <directory>${project.basedir}/out</directory>
         <outputDirectory>${project.build.directory}/classes</outputDirectory>
 
         <plugins>

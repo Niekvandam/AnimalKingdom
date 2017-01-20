@@ -8,7 +8,8 @@ import niek.animalkingdom.reptiles.Crocodile;
 import niek.animalkingdom.reptiles.Snake;
 import niek.animalkingdom.zoo.Zoo;
 
-public class AnimalKingdom1 {
+public class AnimalKingdom1
+{
 
     public static void main(String[] args) throws InterruptedException {
 

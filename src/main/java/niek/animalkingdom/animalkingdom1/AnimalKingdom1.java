@@ -1,18 +1,12 @@
-package animalkingdom1;
-import birds.Pinguin;
-import birds.Bird;
-import birds.Parrot;
-import general.Animal;
-import general.Female;
-import general.Male;
-import mammals.*;
-import reptiles.Crocodile;
-import reptiles.Reptile;
-import reptiles.Snake;
-import zoo.Cage;
-import zoo.Zoo;
-
-import java.util.ArrayList;
+package niek.animalkingdom.animalkingdom1;
+import niek.animalkingdom.birds.Pinguin;
+import niek.animalkingdom.birds.Parrot;
+import niek.animalkingdom.general.Female;
+import niek.animalkingdom.general.Male;
+import niek.animalkingdom.mammals.*;
+import niek.animalkingdom.reptiles.Crocodile;
+import niek.animalkingdom.reptiles.Snake;
+import niek.animalkingdom.zoo.Zoo;
 
 public class AnimalKingdom1 {
 

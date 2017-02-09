@@ -61,7 +61,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.3.6.RELEASE</version>
         </dependency>
 
         <!-- The spring-aop module provides an AOP Alliance-compliant aspect-oriented
@@ -69,7 +69,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.3.6.RELEASE</version>
         </dependency>
 
         <!-- The spring-webmvc module (also known as the Web-Servlet module) contains
@@ -78,7 +78,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.3.6.RELEASE</version>
         </dependency>
 
         <!-- The spring-web module provides basic web-oriented integration features
@@ -87,7 +87,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>4.3.6.RELEASE</version>
         </dependency>
 
 
